@@ -32,13 +32,13 @@ The project offered a very valuable exercise in collaborative development. Wizar
 ### GitHub repository:
 
 My solution is contained within a project called: W5-Challenge-Mayer.  
-The project has now been pushed my GitHub repository: https://github.com/paulmayer-fullstacker/week5/
+The project has now been pushed my GitHub repository: https://github.com/paulmayer-fullstacker/week-5/
 
 
 ### GitHub Pages:
 
 The solution has been published to GitHub Pages, and can be found at this URL:  
-https://paulmayer-fullstacker.github.io/week5/W5-Challenge-Mayer/
+https://paulmayer-fullstacker.github.io/week-5/W5-Challenge-Mayer/
 
 ---
 
