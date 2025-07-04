@@ -19,11 +19,11 @@ The solution has been pushed to my GitHub repository and published to GitHub Pag
 
 The main functionality of the interactive weather dashboard is defined within the JS file. The JS file contains the client-side logic, accommodating manipulation of the Document Object Model (DOM), and event handling. The JS file also manages API consumption and remote data access.   
 
-The dashboard weather display relies on retreival of weather data from an Open Weather Map server. Here is the API call (provided by 8-UP), to the OpenWeatherMap API to retrieve current weather data. The call requires the location for the requested weather information (longditude and latitude) and an API key (also provided by 8-UP).  
+The dashboard weather display relies on retrieval of weather data from an Open Weather Map server. Here is the API call (provided by 8-UP), to the OpenWeatherMap API to retrieve current weather data. The call requires the location for the requested weather information (longitude and latitude) and an API key (also provided by 8-UP).  
 
     `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${API_KEY}&units=metric`
 
-The API call returnes a data object (JSON format) populated with current weather and some local data for the specified latitude and longitude. Before JS coding commenced, for the clinet-side script, the API call was tested using the REST Client extension for VSCode, published by Huachao Mao.
+The API call returns a data object (JSON format) populated with current weather and some local data for the specified latitude and longitude. Before JS coding commenced, for the client-side script, the API call was tested using the REST Client extension for VSCode, published by Huachao Mao.
 
 The JS file was judiciously commented, during development. However, during team collaboration exercises, most of the comments were removed. The HTML and CSS files still contain useful comments.  
 
@@ -33,13 +33,13 @@ Wizards of the Apocalypse started with a Minimal Viable Product (MVP), developin
 
 ### Development of the MVP
 
-Development of the MVP took the form of Bug Fixing. Identifying issues with functionallity of the MVP, prioritising those issues, and allocating non-conflicting work to team members. In this way a flow of incrementally improved code was continually merged into GitHub. One of the tasks allocated to me, was to display the correct local time at the required location.
+Development of the MVP took the form of Bug Fixing. Identifying issues with functionality of the MVP, prioritising those issues, and allocating non-conflicting work to team members. In this way a flow of incrementally improved code was continually merged into GitHub. One of the tasks allocated to me, was to display the correct local time at the required location.
 
 #### Display Local Time
 
-The API call (shown above) returns a JSON object. Each returned object has members that allow us to display the current date time at the specified location. The 'dt' member holds a value that represents a time-stamp for the location. The time-stamp is the number of seconds elapsed since the Unix epoc (00:00Hr 01Jan1970), in Coordinated Universal Time (UTC) the universal equivalent of GMT. The 'timezone' member holds a a numeric value for the shift in seconds from UTC, for the requested location. A positive value means the location is ahead of UTC, and a negative value means it's behind UTC.
+The API call (shown above) returns a JSON object. Each returned object has members that allow us to display the current date time at the specified location. The 'dt' member holds a value that represents a time-stamp for the location. The time-stamp is the number of seconds elapsed since the Unix epoch (00:00Hr 01Jan1970), in Coordinated Universal Time (UTC) the universal equivalent of GMT. The 'timezone' member holds a a numeric value for the shift in seconds from UTC, for the requested location. A positive value means the location is ahead of UTC, and a negative value means it's behind UTC.
 
-See the script to calculate and display the local time, <a href="https://github.com/paulmayer-fullstacker/week-5/blob/main/W5-Challenge-Mayer/script.js#L170" target="_blank"> here</a>()
+See the script to calculate and display the local time, <a href="https://github.com/paulmayer-fullstacker/week-5/blob/main/W5-Challenge-Mayer/script.js#L170" target="_blank"> here.</a>
 
 ### Future Development:
 
