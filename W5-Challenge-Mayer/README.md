@@ -35,6 +35,12 @@ Wizards of the Apocalypse started with a Minimal Viable Product (MVP), developin
 
 Development of the MVP took the form of Bug Fixing. Identifying issues with functionallity of the MVP, prioritising those issues, and allocating non-conflicting work to team members. In this way a flow of incrementally improved code was continually merged into GitHub. One of the tasks allocated to me, was to display the correct local time at the required location.
 
+#### Display Local Time
+
+The API call (shown above) returns a JSON object. Each returned object has members that allow us to display the current date time at the specified location. The 'dt' member holds a value that represents a time-stamp for the location. The time-stamp is the number of seconds elapsed since the Unix epoc (00:00Hr 01Jan1970), in Coordinated Universal Time (UTC) the universal equivalent of GMT. The 'country' holds a country code (i.e., UK, US, AU. For United Kingdon, United States, or Australia). This country code canbe used to determin the local offset (+/-), from UTC.
+
+Check out this important function: [My Function](https://github.com/paulmayer-fullstacker/week-5/blob/main/W5-Challenge-Mayer/script.js#L170)
+
 ### Future Development:
 
 Currently the API key is hardcoded within the JS file. As such, anyone can view the key simply using their browser's developer tool. Storing API keys directly in client-side scripts, in this way, is a major security vulnerability. To remedy this, a solution was scoped to build a proxy server to deal with API authentication in server-side script. A solution was built and tested, employing a node.js environment. However, it was decided that this solution was beyond the scope of this project. So, the solution was shelved, to be revisited in a later module.
