@@ -25,6 +25,10 @@ The JS file was judiciously commented, during development. However, during team 
 
 The project offered a very valuable exercise in collaborative development. Wizards of the Apocalypse spent relatively little time in development. Most contact time was spent practicing with GitHub.
 
+### Future Development:
+
+Currently the API key is hardcoded within the JS file. As such, anyone can view the key simply using their browser's developer tool. Storing API keys directly in client-side scripts, in this way, is a major security vulnerability. To remedy this, a solution was scoped to build a proxy server to deal with API authentication in server-side script. A solution was built and tested, employing a node.js environment. However, it was decided that this solution was beyond the scope of this project. So, the solution was shelved, to be revisited in a later module.
+
 ---
 
 ## GitHub
