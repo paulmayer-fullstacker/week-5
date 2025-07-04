@@ -39,7 +39,7 @@ Development of the MVP took the form of Bug Fixing. Identifying issues with func
 
 The API call (shown above) returns a JSON object. Each returned object has members that allow us to display the current date time at the specified location. The 'dt' member holds a value that represents a time-stamp for the location. The time-stamp is the number of seconds elapsed since the Unix epoc (00:00Hr 01Jan1970), in Coordinated Universal Time (UTC) the universal equivalent of GMT. The 'country' holds a country code (i.e., UK, US, AU. For United Kingdon, United States, or Australia). This country code canbe used to determin the local offset (+/-), from UTC.
 
-Check out this important function: [My Function](https://github.com/paulmayer-fullstacker/week-5/blob/main/W5-Challenge-Mayer/script.js#L170)
+Check out this important function: <a href="https://github.com/paulmayer-fullstacker/week-5/blob/main/W5-Challenge-Mayer/script.js#L170" target="_blank">My Function</a>()
 
 ### Future Development:
 
