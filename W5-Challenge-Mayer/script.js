@@ -168,13 +168,12 @@ async function fetchWeatherData(latitude, longitude, cityName, country) {
       const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`; 
       
       // Calculate local time. FIXED
-      const dt = data.dt; 
-      const timezoneOffset = data.timezone; 
-      //const utcDate = new Date(dt * 1000); 
-      //const localDateAtLocation = new Date(utcDate.getTime() + (timezoneOffset * 1000));
-      //const localTimestamp = (dt + timezoneOffset) * 1000; // Convert to milliseconds
-      //const localDate = new Date(localTimestamp);
+      const dt = data.dt;                    // Unix timestamp in UTC (seconds)
+      const timezoneOffset = data.timezone;  // Shift from UTC in seconds for the location
+      // Calculate the timestamp for the local time at the target location, then create a Date object
+      // JavaScript Date object constructor expects timesatamp in milliseconds.
       const localDateInTargetZone = new Date((dt + timezoneOffset) * 1000);
+      // Format date object for display
       const time = localDateInTargetZone.toLocaleString('en-GB', {
           hour: '2-digit',
           minute: '2-digit',
@@ -184,7 +183,7 @@ async function fetchWeatherData(latitude, longitude, cityName, country) {
           timeZone: 'UTC'
       });
       
-      // Display weather content including the icon and passed lat/lon
+      // Display weather content including the icon, passed lat/lon and local time.
       weatherContent.innerHTML = `
           <p class="weather-icon-container"><img src="${iconUrl}" alt="${weatherDescription} icon"></p>
           <p><strong>Location:</strong> ${cityName}, ${country} (<span title="Latitude">${latitude.toFixed(4)}</span>&deg;, <span title="Longitude">${longitude.toFixed(4)}</span>&deg;)</p>
