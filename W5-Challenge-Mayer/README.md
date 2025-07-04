@@ -17,13 +17,23 @@ The solution has been pushed to my GitHub repository and published to GitHub Pag
 
 ### Behind the Weather Dashboard:
 
-The main functionality of the interactive weather dashboard is defined within the JS file. The JS file contains the client-side logic, accommodating manipulation of the Document Object Model (DOM), and event handling. The JS file also manages API consumption and remote data access.  
+The main functionality of the interactive weather dashboard is defined within the JS file. The JS file contains the client-side logic, accommodating manipulation of the Document Object Model (DOM), and event handling. The JS file also manages API consumption and remote data access.   
+
+The dashboard weather display relies on retreival of weather data from an Open Weather Map server. Here is the API call (provided by 8-UP), to the OpenWeatherMap API to retrieve current weather data. The call requires the location for the requested weather information (longditude and latitude) and an API key (also provided by 8-UP).  
+
+    `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${API_KEY}&units=metric`
+
+The API call returnes a data object (JSON format) populated with current weather and some local data for the specified latitude and longitude. Before JS coding commenced, for the clinet-side script, the API call was tested using the REST Client extension for VSCode, published by Huachao Mao.
 
 The JS file was judiciously commented, during development. However, during team collaboration exercises, most of the comments were removed. The HTML and CSS files still contain useful comments.  
 
 ### Collaboration:
 
-The project offered a very valuable exercise in collaborative development. Wizards of the Apocalypse spent relatively little time in development. Most contact time was spent practicing with GitHub.
+Wizards of the Apocalypse started with a Minimal Viable Product (MVP), developing a usable product from there. The development project offered a very valuable exercise in collaborative development. Wizards of the Apocalypse spent relatively little time in development. Most contact time was spent practicing with GitHub.
+
+### Development of the MVP
+
+Development of the MVP took the form of Bug Fixing. Identifying issues with functionallity of the MVP, prioritising those issues, and allocating non-conflicting work to team members. In this way a flow of incrementally improved code was continually merged into GitHub. One of the tasks allocated to me, was to display the correct local time at the required location.
 
 ### Future Development:
 
